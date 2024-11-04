@@ -852,11 +852,11 @@
 					selectState(state)
 				}
 			})
-
+ 
 setInterval(() => {
 	const color = document.querySelectorAll('.PG-MAP [data-geo-id="11"]')[0].style.fill
 	document.querySelectorAll('.overlay_eua [data-geo-id="11"]')[0].style.fill = color
-}, 5000);
+}, 500);
 
 		window.addEventListener('click', e => {
 			if (document.querySelector('.overlay_eua').contains(e.target)) {
