@@ -68,7 +68,15 @@
 			max-width: 30px;
 			margin: 4rem 0 0
 		}
-		.content_eua .cnn-pcl-embed {
+		.content_eua .PG-MAP {
+			opacity: 0;
+			transition: all 250ms ease-in;
+		}
+		.content_eua .SG-MAP {
+			opacity: 0;
+			transition: all 250ms ease-in;
+		}
+		.content_eua .HG-MAP {
 			opacity: 0;
 			transition: all 250ms ease-in;
 		}
@@ -90,8 +98,23 @@
 		<div class="content_eua">
 			<script>window.PCL_POLLER_HEADERS = { "politics.api.cnn.io": { "x-api-key": "embed-ins-portugal", "x-cnn-service-authkey": "ins-portugal-84Hy9fG1XNtV1q2H" }, "politics-static.cnn.io": { "x-api-key": "embed-ins-portugal", "x-cnn-service-authkey": "ins-portugal-84Hy9fG1XNtV1q2H" } };</script>
 			<link rel="stylesheet" href="https://politics-static.cnn.io/embeds/multi-map-lite/styles.css" />
-			<div class="cnn-pcl-embed fadeinMap" data-config='{"resourceType": "NationalRacesLite", "contestTypeBucket": "Generals", "adminLevel": "Admin0", "paintingMode": "projection", "variations": ["--card", "--legend", "--no-tooltip", "politics-nav-bar_issue-hub"]}' data-embedname="multi-map-lite" data-base-url="https://dev-politics.api.cnn.io/results/national-races-lite/2024-" data-component-key="20241105-*-US-*-MultiRaceMap" data-selected-tab="PG" data-feature-flag-url="https://stage-politics-static.cnn.io/2021/feature-flags/stage/20241105.json" data-tabs='[{ "title": "PRESIDENT", "id": "PG", "raceType": "P" }]' data-map-urls='{"PG": "https://atlas.cnn.io/us/election-county/2024/US.svg"}' data-year="2024" data-hide-nav-bar="true" data-language="pt" data-base->
-				<script async defer src="https://politics-static.cnn.io/embeds/multi-map-lite/bundle.js"></script>
+			
+			<div class="PG-MAP fadeinMap">
+				<div class="cnn-pcl-embed" data-config='{"resourceType": "NationalRacesLite", "contestTypeBucket": "Generals", "adminLevel": "Admin0", "paintingMode": "projection", "variations": ["--card", "--legend", "--no-tooltip", "politics-nav-bar_issue-hub"]}' data-embedname="multi-map-lite" data-base-url="https://dev-politics.api.cnn.io/results/national-races-lite/2024-" data-component-key="20241105-*-US-*-MultiRaceMap" data-selected-tab="PG" data-feature-flag-url="https://stage-politics-static.cnn.io/2021/feature-flags/stage/20241105.json" data-tabs='[{ "title": "PRESIDENT", "id": "PG", "raceType": "P" }]' data-map-urls='{"PG": "https://atlas.cnn.io/us/election-county/2024/US.svg"}' data-year="2024" data-hide-nav-bar="true" data-language="pt" data-base->
+					<script async defer src="https://politics-static.cnn.io/embeds/multi-map-lite/bundle.js"></script>
+				</div>
+			</div>
+			
+			<div class="SG-MAP">
+				<div class="cnn-pcl-embed" data-config='{"resourceType": "NationalRacesLite", "contestTypeBucket": "Generals", "adminLevel": "Admin0", "paintingMode": "projection", "variations": ["--card", "--legend", "--no-tooltip", "politics-nav-bar_issue-hub"]}' data-embedname="multi-map-lite" data-base-url="https://dev-politics.api.cnn.io/results/national-races-lite/2024-" data-component-key="20241105-*-US-*-MultiRaceMap" data-selected-tab="SG" data-feature-flag-url="https://stage-politics-static.cnn.io/2021/feature-flags/stage/20241105.json" data-tabs='[{ "title": "PRESIDENT", "id": "SG", "raceType": "S" }]' data-map-urls='{"SG": "https://atlas.cnn.io/us/election-county/2024/US-SG.svg"}' data-year="2024" data-hide-nav-bar="true" data-language="pt" data-base->
+					<script async defer src="https://politics-static.cnn.io/embeds/multi-map-lite/bundle.js"></script>
+				</div>
+			</div>
+
+			<div class="HG-MAP">
+				<div class="HG-MAP cnn-pcl-embed" data-config='{"resourceType": "NationalRacesLite", "contestTypeBucket": "Generals", "adminLevel": "Admin0", "paintingMode": "projection", "variations": ["--card", "--legend", "--no-tooltip", "politics-nav-bar_issue-hub"]}' data-embedname="multi-map-lite" data-base-url="https://dev-politics.api.cnn.io/results/national-races-lite/2024-" data-component-key="20241105-*-US-*-MultiRaceMap" data-selected-tab="HG" data-feature-flag-url="https://stage-politics-static.cnn.io/2021/feature-flags/stage/20241105.json" data-tabs='[{ "title": "PRESIDENT", "id": "HG", "raceType": "H" }]' data-map-urls='{"HG": "https://atlas.cnn.io/us/cd/2024/US.svg"}' data-year="2024" data-hide-nav-bar="true" data-language="pt" data-base->
+					<script async defer src="https://politics-static.cnn.io/embeds/multi-map-lite/bundle.js"></script>
+				</div>
 			</div>
 
 			<div class="overlay_eua">
@@ -587,11 +610,14 @@
 			console.log("pg");
 			document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
 			e.target.classList.add('selected')
+
+			document.querySelector('.fadeinMap').classList.remove('fadeinMap')
+			document.querySelector('.PG-MAP').classList.add('fadeinMap')
 			
 			selectedElection = 'PG'
 			selectedState = undefined
 			selectState(globalState)
-			selectMap()
+			// selectMap()
 			return false
 		}
 		// SG btn
@@ -600,11 +626,14 @@
 			console.log("sg");
 			document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
 			e.target.classList.add('selected')
+
+			document.querySelector('.fadeinMap').classList.remove('fadeinMap')
+			document.querySelector('.SG-MAP').classList.add('fadeinMap')
 			
 			selectedElection = 'SG'
 			selectedState = undefined
 			selectState(globalState)
-			selectMap()
+			// selectMap()
 			return false
 		}
 		// HG btn
@@ -614,10 +643,13 @@
 			document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
 			e.target.classList.add('selected')
 			
+			document.querySelector('.fadeinMap').classList.remove('fadeinMap')
+			document.querySelector('.HG-MAP').classList.add('fadeinMap')
+			
 			selectedElection = 'HG'
 			selectedState = undefined
 			selectState(globalState)
-			selectMap()
+			// selectMap()
 			return false
 		}
 
