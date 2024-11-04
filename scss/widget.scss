@@ -144,10 +144,17 @@ body {
 
 // mapa
 .content_eua {
+    width: 100%;
     position: relative;
     flex: 1;
-    align-self: center;
+    //align-self: stretch;
+    display: grid;
+    align-items: center;
 }
+
+  .content_eua > div {
+      grid-area: 1 / 1;
+  }
 
 .overlay_eua {
     position: absolute;

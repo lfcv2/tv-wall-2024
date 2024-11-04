@@ -127,9 +127,15 @@ body {
 }
 
 .content_eua {
+  width: 100%;
   position: relative;
   flex: 1;
-  align-self: center;
+  display: grid;
+  align-items: center;
+}
+
+.content_eua > div {
+  grid-area: 1/1;
 }
 
 .overlay_eua {
