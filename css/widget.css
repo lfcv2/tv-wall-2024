@@ -100,10 +100,6 @@ body {
   height: 100%;
   margin: 0 !important;
   padding: 0 !important;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
-  overflow: hidden;
 }
 
 body {
@@ -147,10 +143,10 @@ body {
   width: 100%;
 }
 .overlay_eua path:hover {
-  stroke: #FBC140 !important;
+  stroke: #FBC140;
   transition: all ease 0.3s;
   z-index: 1;
-  stroke-width: 2px !important;
+  stroke-width: 2px;
 }
 .overlay_eua path {
   stroke-width: 1px;
@@ -159,6 +155,28 @@ body {
   position: relative;
   z-index: 1;
   transition: all ease 0.3s;
+}
+.overlay_eua .st2 {
+  fill: none;
+  stroke: #808080;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+}
+.overlay_eua .st0,
+.overlay_eua .st2 {
+  font-family: "CNNSans", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  pointer-events: none;
+}
+.overlay_eua .st0 {
+  fill: #fff;
+}
+.overlay_eua .st4 {
+  stroke-width: 1;
+  stroke: rgb(255, 255, 255);
+  fill: rgb(176, 180, 192);
 }
 
 .cnn_eua_logo {
@@ -284,4 +302,49 @@ svg.cnn-pcl-svg-map {
 
 [class^=legend-] {
   max-width: 860px !important;
+}
+
+.swing_states {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  /*
+      & > div:nth-child(1) {
+          align-self: end;
+      }
+
+      &>div:nth-child(2) {
+          align-self: end;
+      }
+
+      &>div:nth-child(3) {
+          align-self: end;
+      }
+
+      &>div:nth-child(4) {
+          align-self: end;
+      }
+
+      &>div:nth-child(5) {
+          align-self: start;
+      }
+
+      &>div:nth-child(6) {
+          align-self: start;
+      }
+
+      &>div:nth-child(7) {
+          align-self: start;
+      }
+
+      &>div:nth-child(8) {
+          align-self: start;
+      }
+  */
+}
+.swing_states .state {
+  flex: 1 0 320px;
+}
+.swing_states [data-embedname=core-result-module] {
+  margin: 0;
 }
