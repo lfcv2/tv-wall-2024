@@ -846,7 +846,11 @@
 					}
 
 					unselectAllPolygons()
-					selectPolygon(e)
+					if (e.dataset.geoId === "11") {
+						document.querySelectorAll('.overlay_eua [data-geo-id="11"]').forEach(ee => selectPolygon(ee))
+					} else {
+						selectPolygon(e)
+					}
 
 					const state = stateMap[e.dataset.geoId];
 					selectState(state)
