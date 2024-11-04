@@ -184,6 +184,9 @@ body {
   stroke: rgb(255, 255, 255);
   fill: rgb(176, 180, 192);
 }
+.overlay_eua .st7 {
+  stroke: rgba(255, 255, 255, 0.5);
+}
 
 .cnn_eua_logo {
   margin-block: 1.5rem 1rem;
