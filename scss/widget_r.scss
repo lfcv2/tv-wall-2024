@@ -445,3 +445,20 @@ svg.cnn-pcl-svg-map {
         padding: 0 !important;
     }
 }
+
+.mobile {
+    display: none;
+
+    @media (max-width: 1023px) {
+        display: block;
+    }
+}
+
+.desktop {
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}
+
