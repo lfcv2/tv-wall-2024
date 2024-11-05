@@ -110,6 +110,7 @@
 
 html,
 body {
+    display: flow-root;
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
@@ -120,7 +121,6 @@ body {
 }
 
 body {
-    display: flow-root;
     //background: rgb(28, 45, 93);
     //background: linear-gradient(0deg, rgba(28, 45, 93, 1) 0%, rgba(12, 17, 60, 1) 100%);
     background: radial-gradient(at 50% bottom, rgba(28, 45, 93, 1) 0%, #0f122c 100%);
