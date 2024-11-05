@@ -129,10 +129,13 @@ body {
 .eua_2024_wrapper {
     position: relative;
     z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    height: 100%;
+
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: 100%;
+    }
 }
 
 .header_eua {
@@ -148,6 +151,7 @@ body {
     display: grid;
     align-items: center;
     height: 100%;
+    padding: 1rem;
 }
 
   .content_eua > div {
@@ -159,7 +163,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    //padding: 20px;
 
     &>svg {
         width: 100%;
@@ -224,13 +228,21 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: nowrap;
-    justify-content: center;
+
     margin: 1rem;
     background-color: rgba(76, 88, 118, .4);
     border-radius: .5rem;
 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll;
+
+    @media (min-width: 556px) {
+        justify-content: center;
+    }
+
     li {
-        //flex: 1 0 auto;
+        flex: 0 0 auto;
         list-style: none;
 
         a {
@@ -408,5 +420,21 @@ svg.cnn-pcl-svg-map {
 
     [class^='crm__table-row']:nth-child(3), [class^='crm__table-row']:nth-child(4), [class^='crm__table-row']:nth-child(5), [class^='crm__table-row']:nth-child(6) {
         //display: none;
+    }
+}
+
+
+[class^='state-election-map'] {
+    padding: 0 !important;
+
+    [class^='map-wrapper'] {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    [class^='map-wrapper'] > div {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }

@@ -13,7 +13,6 @@
 			-webkit-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-			overflow: hidden;
 		}
 		.selected {
 			stroke: #FBC140 !important;
@@ -470,16 +469,10 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="refresh-bt" onClick="window.location.reload();"></div>
 	</div>
 	<script>
 		let selectedState
 		let selectedElection = "PG"
-
-		window.addEventListener('wheel', e => {
-			e.preventDefault();
-		}, { passive: false });
 
 		const globalState = {
 			short: 'US',

@@ -113,10 +113,14 @@ body {
 .eua_2024_wrapper {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  height: 100%;
+}
+@media (min-width: 1024px) {
+  .eua_2024_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100%;
+  }
 }
 
 .content_eua {
@@ -126,6 +130,7 @@ body {
   display: grid;
   align-items: center;
   height: 100%;
+  padding: 1rem;
 }
 
 .content_eua > div {
@@ -137,7 +142,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
 }
 .overlay_eua > svg {
   width: 100%;
@@ -193,12 +197,20 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: nowrap;
-  justify-content: center;
   margin: 1rem;
   background-color: rgba(76, 88, 118, 0.4);
   border-radius: 0.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: scroll;
+}
+@media (min-width: 556px) {
+  .navEua {
+    justify-content: center;
+  }
 }
 .navEua li {
+  flex: 0 0 auto;
   list-style: none;
 }
 .navEua li a {
@@ -353,4 +365,16 @@ svg.cnn-pcl-svg-map {
 }
 .swing_states [data-embedname=core-result-module] {
   margin: 0;
+}
+[class^=state-election-map] {
+  padding: 0 !important;
+}
+[class^=state-election-map] [class^=map-wrapper] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+[class^=state-election-map] [class^=map-wrapper] > div {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
