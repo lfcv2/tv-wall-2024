@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-thin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-thinit.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-lightit.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-medium.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-mediumit.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-boldit.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-heavyit.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CNNSans";
+  src: url("/fonts/cnnsans-blackit.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  min-width: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  display: flow-root;
+  background: radial-gradient(at 50% bottom, rgb(28, 45, 93) 0%, #0f122c 100%);
+  color: white;
+  font-family: "CNNSans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.eua_2024_wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 100%;
+}
+
+.content_eua {
+  width: 100%;
+  position: relative;
+  flex: 1;
+  display: grid;
+  align-items: center;
+  height: 100%;
+}
+
+.content_eua > div {
+  grid-area: 1/1;
+}
+
+.overlay_eua {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+.overlay_eua > svg {
+  width: 100%;
+}
+.overlay_eua path:hover {
+  stroke: #FBC140;
+  transition: all ease 0.3s;
+  z-index: 1;
+  stroke-width: 2px;
+}
+.overlay_eua path {
+  stroke-width: 1px;
+  stroke: rgba(255, 255, 255, 0);
+  fill: transparent;
+  position: relative;
+  z-index: 1;
+  transition: all ease 0.3s;
+}
+.overlay_eua .st2 {
+  fill: none;
+  stroke: #808080;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+}
+.overlay_eua .st0,
+.overlay_eua .st2 {
+  font-family: "CNNSans", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  pointer-events: none;
+}
+.overlay_eua .st0 {
+  fill: #fff;
+}
+.overlay_eua .st4 {
+  stroke-width: 1;
+  stroke: rgb(255, 255, 255);
+  fill: rgb(176, 180, 192);
+}
+.overlay_eua .st7 {
+  stroke: rgba(255, 255, 255, 0.5);
+}
+
+.cnn_eua_logo {
+  margin-block: 1.5rem 1rem;
+}
+.cnn_eua_logo > img {
+  width: 80%;
+}
+
+.navEua {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 1rem;
+  background-color: rgba(76, 88, 118, 0.4);
+  border-radius: 0.5rem;
+}
+.navEua li {
+  list-style: none;
+}
+.navEua li a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.25rem;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.25);
+}
+.navEua li a:hover {
+  cursor: pointer;
+}
+.navEua li a.selected {
+  position: relative;
+  /*
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: red;
+  text-underline-offset: 12px;
+  */
+  color: rgb(255, 255, 255);
+}
+.navEua li a.selected::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #cc0000;
+}
+
+.content_eua .cnn-pcl-embed > div {
+  border: 0 !important;
+}
+
+svg.cnn-pcl-svg-map-overlay {
+  width: 100%;
+}
+svg.cnn-pcl-svg-map-overlay path {
+  cursor: pointer;
+}
+
+svg.cnn-pcl-svg-map {
+  height: unset !important;
+  max-height: unset !important;
+}
+
+[class^=group-name] {
+  font-size: 1.5rem !important;
+  color: white !important;
+}
+
+[class^=color-desc-2] {
+  color: white !important;
+  font-size: 1.125rem !important;
+}
+
+[class^=solid-], [class^=pattern-] {
+  width: 2.5rem !important;
+  height: 1rem !important;
+}
+
+[class^=shades-] {
+  width: 200px !important;
+}
+
+[class^=line-] {
+  border-color: #808080 !important;
+}
+
+.votes_eua {
+  flex: 0 0 632px;
+  overflow: hidden;
+}
+
+[class^=map-wrapper] > div {
+  width: 100% !important;
+}
+
+[data-embedname=generals-bop] {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+[data-embedname=core-result-module] {
+  margin: 1rem;
+}
+
+#widget-replace, #kill-me-pls {
+  flex: 1 0 auto;
+}
+#widget-replace > div, #kill-me-pls > div {
+  transform: translateY(-150px);
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+  transition: all 250ms ease;
+}
+#widget-replace .cnn-pcl-embed, #kill-me-pls .cnn-pcl-embed {
+  width: auto;
+}
+
+[class^=legend-] {
+  max-width: 860px !important;
+}
+
+.swing_states {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  /*
+      & > div:nth-child(1) {
+          align-self: end;
+      }
+
+      &>div:nth-child(2) {
+          align-self: end;
+      }
+
+      &>div:nth-child(3) {
+          align-self: end;
+      }
+
+      &>div:nth-child(4) {
+          align-self: end;
+      }
+
+      &>div:nth-child(5) {
+          align-self: start;
+      }
+
+      &>div:nth-child(6) {
+          align-self: start;
+      }
+
+      &>div:nth-child(7) {
+          align-self: start;
+      }
+
+      &>div:nth-child(8) {
+          align-self: start;
+      }
+  */
+}
+.swing_states .state {
+  flex: 1 0 320px;
+}
+.swing_states [data-embedname=core-result-module] {
+  margin: 0;
+}
