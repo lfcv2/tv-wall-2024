@@ -661,47 +661,54 @@
 		}
 
 		// PG btn
-		document.querySelector('.navEua li:nth-child(1) a')
-		.onclick = (e) => {
-			document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
-			e.target.classList.add('selected')
-
-			document.querySelector('.fadeinMap').classList.remove('fadeinMap')
-			document.querySelector('.PG-MAP').classList.add('fadeinMap')
-			
-			selectedElection = 'PG'
-			selectedState = undefined
-			selectState(globalState)
-			return false
-		}
+		document.querySelectorAll('.navEua li:nth-child(1) a')
+		.forEach(e => {
+			e.onclick = () => {
+				document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
+				document.querySelectorAll('.navEua li:nth-child(1) a').forEach(e => e.classList.add('selected'))
+	
+				document.querySelector('.fadeinMap').classList.remove('fadeinMap')
+				document.querySelector('.PG-MAP').classList.add('fadeinMap')
+				
+				selectedElection = 'PG'
+				selectedState = undefined
+				selectState(globalState)
+				return false
+			}
+		})
 		// SG btn
-		document.querySelector('.navEua li:nth-child(2) a')
-		.onclick = (e) => {
-			document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
-			e.target.classList.add('selected')
+		document.querySelectorAll('.navEua li:nth-child(2) a')
+		.forEach(e => {
+			e.onclick = () => {
+				document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
+				document.querySelectorAll('.navEua li:nth-child(2) a').forEach(e => e.classList.add('selected'))
 
-			document.querySelector('.fadeinMap').classList.remove('fadeinMap')
-			document.querySelector('.SG-MAP').classList.add('fadeinMap')
-			
-			selectedElection = 'SG'
-			selectedState = undefined
-			selectState(globalState)
-			return false
-		}
+				document.querySelector('.fadeinMap').classList.remove('fadeinMap')
+				document.querySelector('.SG-MAP').classList.add('fadeinMap')
+				
+				selectedElection = 'SG'
+				selectedState = undefined
+				selectState(globalState)
+				return false
+			}
+		})
+
 		// HG btn
-		document.querySelector('.navEua li:nth-child(3) a')
-		.onclick = (e) => {
-			document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
-			e.target.classList.add('selected')
-			
-			document.querySelector('.fadeinMap').classList.remove('fadeinMap')
-			document.querySelector('.HG-MAP').classList.add('fadeinMap')
-			
-			selectedElection = 'HG'
-			selectedState = undefined
-			selectState(globalState)
-			return false
-		}
+		document.querySelectorAll('.navEua li:nth-child(3) a')
+		.forEach(e => {
+			e.onclick = () => {
+				document.querySelectorAll('.navEua li a').forEach(e => e.classList.remove('selected'))
+				document.querySelectorAll('.navEua li:nth-child(3) a').forEach(e => e.classList.add('selected'))
+				
+				document.querySelector('.fadeinMap').classList.remove('fadeinMap')
+				document.querySelector('.HG-MAP').classList.add('fadeinMap')
+				
+				selectedElection = 'HG'
+				selectedState = undefined
+				selectState(globalState)
+				return false
+			}
+		})
 
 		document.querySelectorAll('.overlay_eua [data-geo-id]')
 			.forEach(e => {
