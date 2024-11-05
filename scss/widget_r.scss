@@ -329,8 +329,11 @@ svg.cnn-pcl-svg-map {
 
 .votes_eua {
     flex: 0 0 632px;
-    //max-height: 100%;
-    overflow: hidden;
+
+    @media (min-width: 1024px) {
+        max-height: 100%;
+        overflow: auto;
+    }
 }
 
 [class^='map-wrapper'] > div {
