@@ -121,6 +121,7 @@ body {
     //background: rgb(28, 45, 93);
     //background: linear-gradient(0deg, rgba(28, 45, 93, 1) 0%, rgba(12, 17, 60, 1) 100%);
     background: radial-gradient(at 50% bottom, rgba(28, 45, 93, 1) 0%, #0f122c 100%);
+    background-attachment: fixed ;
     color: white;
     font-family: "CNNSans", Arial, Helvetica, sans-serif ;
     font-weight: 400;
@@ -133,7 +134,7 @@ body {
     @media (min-width: 1024px) {
         display: flex;
         flex-wrap: wrap;
-        overflow: hidden;
+        //overflow: hidden;
         height: 100%;
     }
 }
