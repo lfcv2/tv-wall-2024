@@ -289,7 +289,7 @@ svg.cnn-pcl-svg-map {
 
 [data-embedname=generals-bop] {
   background-color: white;
-  padding: 1rem;
+  padding: 0 1rem 1rem;
   margin: 1rem;
   border-radius: 0.5rem;
 }
@@ -380,4 +380,13 @@ svg.cnn-pcl-svg-map {
 
 [class^=crm_header__title-] {
   font-size: 1.75rem !important;
+}
+
+span[class^=bop-bottom__text-] {
+  font-size: 1.15rem !important;
+  padding: 0.2rem 0;
+}
+
+p[class^=bop-bottom__text-] {
+  font-size: 1rem !important;
 }
