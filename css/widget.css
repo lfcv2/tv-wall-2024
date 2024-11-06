@@ -357,3 +357,23 @@ svg.cnn-pcl-svg-map {
 .swing_states [data-embedname=core-result-module] {
   margin: 0;
 }
+[data-testid=candidate-name] {
+  font-size: 1.375rem !important;
+}
+
+[data-testid=votepercent] {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+[class^=proportional_allocation__electoral_votes-] {
+  font-size: 1.125rem !important;
+}
+
+[class^=proportional_allocation-] {
+  padding: 0 !important;
+}
+
+[class^=crm__table-row-] td {
+  vertical-align: middle !important;
+}
