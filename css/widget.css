@@ -370,10 +370,6 @@ svg.cnn-pcl-svg-map {
   font-size: 1.125rem !important;
 }
 
-[class^=proportional_allocation-] {
-  padding: 0 !important;
-}
-
 [class^=crm__table-row-] td {
   vertical-align: middle !important;
 }
